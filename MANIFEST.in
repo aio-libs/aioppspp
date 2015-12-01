@@ -1,0 +1,8 @@
+global-exclude *.pyc
+graft aioppspp
+graft docs
+include CHANGES.rst
+include LICENSE
+include Makefile
+include README.rst
+prune docs/_build
