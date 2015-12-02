@@ -84,6 +84,7 @@ distclean:
 # target: docs - Builds Sphinx html docs
 docs: $(SPHINX)
 	@$(SPHINX) -b html -d docs/_build/doctrees docs/ docs/_build/html
+	@$(SPHINX) -b doctest -d docs/_build/doctrees docs/ docs/_build/doctest
 
 
 flake: $(FLAKE8)

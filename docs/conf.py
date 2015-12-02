@@ -38,6 +38,8 @@ aioppspp = importlib.import_module('aioppspp')
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
+    'sphinx.ext.intersphinx',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -291,3 +293,16 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+# Example configuration for intersphinx: refer to the Python standard library.
+intersphinx_mapping = {
+    'http://docs.python.org/3': None,
+}
+
+# Both the class’ and the __init__ method’s docstring are concatenated
+#  and inserted.
+autoclass_content = 'both'
+
+# List of autodoc directive flags that should be automatically applied to all
+# autodoc directives.
+autodoc_default_flags = ['members', 'show-inheritance']

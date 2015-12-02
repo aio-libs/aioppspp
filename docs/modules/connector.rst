@@ -10,16 +10,7 @@
 .. License for the specific language governing permissions and limitations under
 .. the License.
 
-Welcome to aioppspp's documentation!
-====================================
+Base Connector and Protocol
+===========================
 
-Contents:
-
-.. toctree::
-    :maxdepth: 2
-
-    modules/index
-    changes
-    license
-
-.. include:: ../README.rst
+.. automodule:: aioppspp.connector
