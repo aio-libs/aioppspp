@@ -10,14 +10,8 @@
 .. License for the specific language governing permissions and limitations under
 .. the License.
 
-Modules
-=======
+UDP Connector and Protocol
+==========================
 
-Contents:
-
-.. toctree::
-    :maxdepth: 2
-
-    connection
-    connector
-    udp
+.. automodule:: aioppspp.udp
+    :members:
