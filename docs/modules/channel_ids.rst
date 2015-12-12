@@ -10,15 +10,7 @@
 .. License for the specific language governing permissions and limitations under
 .. the License.
 
-Modules
-=======
+Channel ID
+==========
 
-Contents:
-
-.. toctree::
-    :maxdepth: 2
-
-    channel_ids
-    connection
-    connector
-    udp
+.. automodule:: aioppspp.channel_ids
