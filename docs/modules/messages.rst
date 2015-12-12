@@ -10,17 +10,9 @@
 .. License for the specific language governing permissions and limitations under
 .. the License.
 
-Modules
-=======
+Messages
+========
 
-Contents:
-
-.. toctree::
-    :maxdepth: 2
-
-    channel_ids
-    connection
-    connector
-    datagrams
-    messages
-    udp
+.. automodule:: aioppspp.messages
+    :members:
+    :show-inheritance:
