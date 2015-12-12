@@ -10,18 +10,8 @@
 .. License for the specific language governing permissions and limitations under
 .. the License.
 
-Modules
-=======
+PPSPP application protocol
+==========================
 
-Contents:
-
-.. toctree::
-    :maxdepth: 2
-
-    channel_ids
-    connection
-    connector
-    datagrams
-    messages
-    ppspp
-    udp
+.. automodule:: aioppspp.ppspp
+    :members:
