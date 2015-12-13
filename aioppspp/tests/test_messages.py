@@ -30,9 +30,9 @@ class MessagesTestCase(unittest.TestCase):
         class Message(aioppspp.messages.Message):
             @property
             def type(self):
-                return 42
+                return aioppspp.messages.MessageType.ACK
 
-        with self.assertRaises(KeyError):
+        with self.assertRaises(ValueError):
             aioppspp.messages.decode(memoryview(b'\xcc'))
 
         with self.assertRaises(KeyError):
@@ -42,9 +42,9 @@ class MessagesTestCase(unittest.TestCase):
         class Message(aioppspp.messages.Message):
             @property
             def type(self):
-                return 42
+                return aioppspp.messages.MessageType.ACK
 
-        data = Message().type.to_bytes(1, 'big')
+        data = Message().type.value.to_bytes(1, 'big')
         messages = aioppspp.messages.decode(
             memoryview(data),
             handlers={Message().type: lambda d: (Message(), d)})

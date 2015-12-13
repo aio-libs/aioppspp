@@ -18,12 +18,16 @@ from itertools import (
     chain,
 )
 
+from .types import (
+    MessageType,
+)
 from ..constants import (
     BYTE,
 )
 
 __all__ = (
     'Message',
+    'MessageType',
     'decode',
     'encode',
 )
@@ -46,6 +50,7 @@ class Message(tuple, metaclass=abc.ABCMeta):
     @property
     @abc.abstractmethod
     def type(self):
+        """Should return message type enumeration object."""
         raise NotImplementedError
 
 
@@ -66,7 +71,7 @@ def decode(data, *, handlers=None):
 
 def decode_message(data, *, handlers=None):
     handlers = handlers or decode_message_handlers()
-    return handlers[data[0]](data[BYTE:])
+    return handlers[MessageType(data[0])](data[BYTE:])
 
 
 def encode(messages, *, handlers=None):
@@ -85,7 +90,7 @@ def encode(messages, *, handlers=None):
 def encode_message(message, *, handlers=None):
     handlers = handlers or encode_message_handlers()
     return bytearray(chain.from_iterable([
-        [message.type],
+        [message.type.value],
         handlers[message.type](message),
     ]))
 

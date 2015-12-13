@@ -16,3 +16,4 @@ Messages
 .. automodule:: aioppspp.messages
     :members:
     :show-inheritance:
+    :undoc-members:
