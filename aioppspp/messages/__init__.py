@@ -18,6 +18,10 @@ from itertools import (
     chain,
 )
 
+from . import handshake
+from .handshake import (
+    Handshake,
+)
 from .types import (
     MessageType,
 )
@@ -52,6 +56,9 @@ class Message(tuple, metaclass=abc.ABCMeta):
     def type(self):
         """Should return message type enumeration object."""
         raise NotImplementedError
+
+
+Message.register(Handshake)
 
 
 def decode(data, *, handlers=None):
@@ -97,11 +104,11 @@ def encode_message(message, *, handlers=None):
 
 def decode_message_handlers():
     return {
-
+        MessageType.HANDSHAKE: handshake.decode
     }
 
 
 def encode_message_handlers():
     return {
-
+        MessageType.HANDSHAKE: handshake.encode
     }

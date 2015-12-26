@@ -17,3 +17,18 @@ Messages
     :members:
     :show-inheritance:
     :undoc-members:
+
+Handshake
+---------
+
+.. automodule:: aioppspp.messages.handshake
+    :members:
+    :show-inheritance:
+    :undoc-members:
+
+Protocol Options
+^^^^^^^^^^^^^^^^
+.. automodule:: aioppspp.messages.protocol_options
+    :members:
+    :show-inheritance:
+    :undoc-members:
