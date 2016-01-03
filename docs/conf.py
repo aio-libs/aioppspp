@@ -58,7 +58,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'aioppspp'
-copyright = '2015, Alexander Shorin'
+copyright = '2015-2016, Alexander Shorin'
 author = 'Alexander Shorin'
 
 # The version info for the project you're documenting, acts as replacement for
