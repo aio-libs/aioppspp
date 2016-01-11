@@ -61,7 +61,7 @@ setup(
     extras_require={
         'dev': [
             'coverage==4.0.3',
-            'flake8==2.5.0',
+            'flake8==2.5.1',
         ],
         'docs': [
             'sphinx==1.3.1',
