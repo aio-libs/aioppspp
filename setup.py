@@ -68,6 +68,6 @@ setup(
         ]
     },
     tests_require=[
-        'hypothesis==1.15.0',
+        'hypothesis==2.0.0',
     ],
 )
